@@ -6,5 +6,8 @@ Start application.
 
 try controller using url:
 
-http://localhost:8080/SpringMvc/greet/welcome/India/user1
+#Testing PathVariables collected into map.
+http://localhost:8080/greet/hi/India/user1
 
+#Testing single path variables.
+http://localhost:8080/greet/welcome/India/user1

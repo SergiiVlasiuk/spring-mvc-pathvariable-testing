@@ -15,7 +15,7 @@ public class HelloController {
     @RequestMapping(value="/welcome/{countryName}/{userName}")
     public ModelAndView test(@PathVariable("userName") String userName, @PathVariable("countryName") String countryName) throws IOException {
         ModelAndView mav = new ModelAndView("home");
-        mav.addObject("myMessage", "Welcome To "+countryName+" , Spring MVC - "+userName);
+        mav.addObject("myMessage", "Welcome To "+countryName+" , Spring MVC - "+userName + ".[via single path variables].");
         return mav;
     }
 
@@ -26,7 +26,7 @@ public class HelloController {
         String userName = pathVars.get("un");
 
         ModelAndView mav = new ModelAndView("home");
-        mav.addObject("myMessage", "Hi "+userName+" in "+ countryName);
+        mav.addObject("myMessage", "Hi "+userName+" in "+ countryName + ".[via map PathVariable]");
         return mav;
     }
 }
